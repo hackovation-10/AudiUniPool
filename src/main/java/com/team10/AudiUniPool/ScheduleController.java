@@ -23,7 +23,7 @@ public class ScheduleController {
 			@RequestParam(value="user") Long userId,
 			@RequestParam(value="auto") Long autoId
 			) {
-		
+
 		User user = fixtures.users.stream().filter(u -> u.getId() == userId).findFirst().get();
 		Auto auto = fixtures.getAutos().stream().filter(a -> a.getId() == autoId).findFirst().get();
 		auto.setAvailability(false);
