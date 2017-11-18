@@ -1,21 +1,22 @@
 package com.team10.AudiUniPool;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ScheduleController {
 
-	Fixtures fixtures = new Fixtures();
+	@Autowired
+	Fixtures fixtures;
 
 	@RequestMapping("/listSchedule")
 	public List<Schedule> list() {
 
 		return fixtures.getSchedules();
 	}
-
 
 	@RequestMapping(value="/requestAuto"/*, method = RequestMethod.POST*/)
 	public List<Schedule> requestAuto(
@@ -30,10 +31,6 @@ public class ScheduleController {
 		fixtures.getSchedules().add(schedule);
 		return list();
 	}
-
-
-
-
 
 }
 

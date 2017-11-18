@@ -4,14 +4,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Fixtures {
 	
 	Auto v1 = new Auto(1, "a1", "123", true);
-	Auto v2 = new Auto(2, "a8", "Cr", true);
-	Auto v3 = new Auto(3, "a3", "321", false);
-	Auto v4 = new Auto(4, "q7", "asd", false);
-	Auto v5 = new Auto(5, "a6", "tyu", false);
-	Auto v6 = new Auto(6, "a5", "zxc", false);
+	Auto v2 = new Auto(2, "a8", "Cra", true);
+	Auto v3 = new Auto(3, "a3", "321", true);
+	Auto v4 = new Auto(4, "q7", "asd", true);
+	Auto v5 = new Auto(5, "a6", "tyu", true);
+	Auto v6 = new Auto(6, "a5", "zxc", true);
 	
 	User julia = new User(1, "Julia", "B");
 	User filipe = new User(2, "Filipe", "B");
