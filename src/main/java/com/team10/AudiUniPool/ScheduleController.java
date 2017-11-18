@@ -1,19 +1,18 @@
 package com.team10.AudiUniPool;
-
 import java.util.List;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AutoController {
+public class ScheduleController {
 
-	Fixtures Fixtures = new Fixtures();
-	
+Fixtures fixtures = new Fixtures();
 
-	@RequestMapping("/listAuto")
-	public List<Auto> list() {
-		return Fixtures.getAutos();
+	@RequestMapping("/listSchedule")
+	public List<Schedule> list() {
+		fixtures.loadData();
+		
+		return fixtures.getSchedules();
 	}
-
 }
+

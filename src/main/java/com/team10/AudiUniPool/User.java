@@ -2,11 +2,13 @@ package com.team10.AudiUniPool;
 public class User {
 
     private final long id;
-    private final String content;
+    private final String name;
+    private String drivingLicenceType;
 
-    public User(long id, String content) {
+    public User(long id, String name, String drivingLicenceType) {
         this.id = id;
-        this.content = content;
+        this.name = name;
+        this.drivingLicenceType = drivingLicenceType;
     }
 
     public long getId() {
@@ -14,6 +16,20 @@ public class User {
     }
 
     public String getContent() {
-        return content;
+        return name;
     }
+
+	public String getDrivingLicenceType() {
+		return drivingLicenceType;
+	}
+
+	public void setDrivingLicenceType(String drivingLicenceType) {
+		this.drivingLicenceType = drivingLicenceType;
+	}
+
+	public String getName() {
+		return name;
+	}
+    
+    
 }
