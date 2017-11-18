@@ -7,7 +7,7 @@ public class Auto {
 	private final long id;
 	private final String name;
 	private final String plate;
-	private final Boolean availability;
+	private Boolean availability;
 	private List<Shift> shift;
 
 	public Auto(long id, String name, String drivingLicence, Boolean availability) {
@@ -31,6 +31,18 @@ public class Auto {
 
 	public Boolean getAvailability() {
 		return availability;
+	}
+
+	public List<Shift> getShift() {
+		return shift;
+	}
+
+	public void setShift(List<Shift> shift) {
+		this.shift = shift;
+	}
+
+	public void setAvailability(Boolean availability) {
+		this.availability = availability;
 	}
 	
 

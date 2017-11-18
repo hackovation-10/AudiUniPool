@@ -1,5 +1,6 @@
 package com.team10.AudiUniPool;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,10 +29,14 @@ public class Fixtures {
 	List<User> users;
 	List<Schedule> schedules;
 	
+	public Fixtures() {
+		loadData();
+	}
+	
 	public void loadData(){
-		cars = Arrays.asList(v1,v2,v3,v4,v5,v6);
-		users = Arrays.asList(julia, filipe, jean, joseph, mark);
-		schedules = Arrays.asList(monday);
+		cars = new ArrayList<>(Arrays.asList(v1,v2,v3,v4,v5,v6));
+		users = new ArrayList<>(Arrays.asList(julia, filipe, jean, joseph, mark));
+		schedules = new ArrayList<>(Arrays.asList(monday));
 
 	}
 	
