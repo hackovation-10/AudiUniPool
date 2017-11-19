@@ -82,7 +82,11 @@
           <tr ng-repeat="schedule in index.schedules">
             <td>{{schedule.auto.name}}<td>
             <td>{{schedule.user.name}}<td>
-            <td>{{schedule.startingDate}} to {{schedule.endingDate}}<td>
+            <td>
+              {{schedule.startingDate}} to {{schedule.endingDate}}
+              <input type="button" ng-click="index.cancelRequest($index)" value="Cancel" />
+            <td>
+
           </tr>
         <table>
       </div>

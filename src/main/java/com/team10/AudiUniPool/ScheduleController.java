@@ -27,10 +27,17 @@ public class ScheduleController {
 		User user = fixtures.users.stream().filter(u -> u.getId() == userId).findFirst().get();
 		Auto auto = fixtures.getAutos().stream().filter(a -> a.getId() == autoId).findFirst().get();
 		auto.setAvailability(false);
-		Schedule schedule = new Schedule(1, user, auto, "18/11/2017 20:10", "18/11/2017 22:10");
+		Schedule schedule = new Schedule(fixtures.getSchedules().size(), user, auto, "18/11/2017 20:10", "18/11/2017 22:10");
 		fixtures.getSchedules().add(schedule);
 		return list();
 	}
 
+	@RequestMapping(value="/cancelRequest"/*, method = RequestMethod.POST*/)
+	public List<Schedule> requestAuto(@RequestParam(value="schedule") Integer scheduleId) {
+    Schedule schedule = fixtures.getSchedules().get(scheduleId);
+    schedule.getAuto().setAvailability(true);
+    fixtures.getSchedules().remove(schedule);
+    return list();
+	}
 }
 

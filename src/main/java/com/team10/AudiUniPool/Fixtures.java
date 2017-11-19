@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class Fixtures {
 	
-	Auto v1 = new Auto(1, "a1", "123", true);
+	Auto v1 = new Auto(1, "a1", "123", false);
 	Auto v2 = new Auto(2, "a8", "Cra", true);
 	Auto v3 = new Auto(3, "a3", "321", true);
 	Auto v4 = new Auto(4, "q7", "asd", true);

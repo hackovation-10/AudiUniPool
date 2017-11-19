@@ -26,6 +26,12 @@
       });
     };
     
+    index.cancelRequest = function(scheduleId) {
+      $http.get('/cancelRequest?schedule='+scheduleId).then(function(data) {
+        refreshData()
+      });
+    };
+    
     
     refreshData();
   });
