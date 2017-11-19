@@ -64,8 +64,10 @@
           <tr ng-repeat="auto in index.autos">
             <td>{{auto.name}}<td>
             <td>{{auto.plate}}<td>
-            <td>{{auto.availability ? 'available' : 'not available'}}<td>
-            <td><input type="button" ng-show="auto.availability" ng-click="index.requestAutoClick(auto)" value="Request" /><td>
+            <td>
+              {{auto.availability ? 'available' : 'not available'}}
+              <input type="button" ng-show="auto.availability" ng-click="index.requestAutoClick(auto)" value="Request" />
+            <td>
           </tr>
         <table>
       </div>

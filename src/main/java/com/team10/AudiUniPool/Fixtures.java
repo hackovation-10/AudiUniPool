@@ -23,9 +23,9 @@ public class Fixtures {
 	User mark = new User(5, "Mark", "B");
 
 	
-	Schedule monday = new Schedule(1, julia, v1, "02/12/2017 8:00AM", "02/12/2017 12:00AM");
+	Schedule monday = new Schedule(1, julia, v1, "02/12/2017 8:00", "02/12/2017 12:00");
 	
-	Shift s1 = new Shift(1, "02/12/1990 8:00", "02/12/2017 12:00AM", julia);
+	Shift s1 = new Shift(1, "02/12/1990 8:00", "02/12/2017 12:00", julia);
 	
 	
 	List<Auto> cars;
